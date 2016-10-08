@@ -8,7 +8,9 @@ This is a multilingual jquery validation plugin which will can easilly validate 
 Dependencies
 --------------------
 [jquery.js](http://jquery.org/) 1.4 >
+
 [persian.date.js](http://babakhani.github.io/PersianWebToolkit/doc/persiandate/0.1.8/) 0.1.6 > **(If you want to use jalali calendar)**
+
 [persian-datepicker.js](http://babakhani.github.io/PersianWebToolkit/doc/datepicker/0.4.5/) 0.1.8 > **(If you want to use jalali calendar)**
 
 
@@ -143,4 +145,3 @@ Here we have been listed all validation that we covered:
 	 1. `<input data-disallowed-chars="a,b,f,g,1,2">`. <i>In this example did not allow to enter `a,b,f,g,1,2` and can enter anything else.</i> note that this input field has **text** validation at least, by default.
 	 2. `<input class="numberValidation" data-disallowed-chars="1,2">`. <i>In this example user can enter any number but `1,2`.</i>
 > **Note**: Disallowed characters separated by `,`
-
