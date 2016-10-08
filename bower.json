@@ -1,0 +1,11 @@
+{
+  "name": "Jquery validation power plugin",
+  "dependencies": {
+    "jquery": "1.*",
+    "persian-datepicker": "^0.4.5",
+    "persian-date": "^0.1.8",
+    "bootstrap": "3.*",
+    "jquery-migrate": "~1.4"
+  },
+  "devDependencies": {}
+}

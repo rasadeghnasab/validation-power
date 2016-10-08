@@ -1,0 +1,22 @@
+{
+  "name": "jquery-validation-power",
+  "version": "1.0.0",
+  "description": "A very spowerful and simple jquery validation plugin",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minify": "0.0.14",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jquery-validators",
+    "validate"
+  ],
+  "author": "Ramin Sadegh nasab",
+  "license": "ISC"
+}

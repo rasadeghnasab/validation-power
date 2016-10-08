@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+*.log
+npm-debug.log*
+node_modules/
+bower_components/
+.idea/
+.idea/vcs.xml
+.idea/workspace.xml
+
