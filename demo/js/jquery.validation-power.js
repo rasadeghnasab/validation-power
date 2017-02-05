@@ -550,7 +550,7 @@
 
 				});
 				if ($.inArray('time', elem.findValidation()) != -1 && jQuery().pDatepicker) {
-					elem.pDatepicker({format : "YYYY/MM/DD", observer: true, viewMode: 'year'});
+					elem.pDatepicker({format: "YYYY/MM/DD", observer: true, viewMode: 'year'});
 				}
 				/*
 				 // integrate with mlKeyboard
@@ -855,6 +855,12 @@
 				}
 			}
 		},
+		/**
+		 * Check attribute existence, if attribute exists return it else return false;
+		 * @param attribute
+		 * @param empty_allowed
+		 * @returns attributeName | false
+		 */
 		attr_existence_check: function (attribute, empty_allowed) {
 			var attr = $(this).attr(attribute);
 
@@ -1253,27 +1259,49 @@
 	};
 
 	var error_messages = function () {
+		var lang = $('html').attr_existence_check('lang') ? $('html').attr_existence_check('lang') : 'en';
 		var error_messages = {
-			email: 'field_name وارد شده صحیح نمی باشد',
-			maxlength: 'field_name نباید بیشتر از length حرف باشد',
-			minlength: 'field_name نباید کمتر از length حرف باشد',
-			exactlength: 'field_name باید length حرف باشد',
-			remain: 'remain حرف باقی مانده',
-			url: 'field_name وارد شده صحیح نمی باشد',
-			match: 'مقادیر field_name یکسان نمی باشد',
-			agerange: 'سن شما باید بین minage و maxage سال باشد',
-			minagerange: 'حداقل سن قابل پذیرش minage سال می باشد',
-			maxagerange: 'سن شما باید کمتر از maxage سال باشد',
-			datecheck: 'field_name وارد شده صحیح نمی باشد',
-			range: 'field_name باید بین min و max باشد.',
-			min: 'field_name باید بزرگتر از min باشد.',
-			max: 'field_name باید کوچکتر از max باشد.',
-			pattern: 'الگوی field_name صحیح نمی باشد',
-			nationalcode: 'field_name وارد شده صحیح نمی باشد',
-			capslock: 'Caps lock شما روشن است'
+			'en': {
+				email: 'field_name value was not correct',
+				maxlength: 'field_name can not has more than length characters.',
+				minlength: 'field_name can not has less than length characters.',
+				exactlength: 'field_name must exactly has length characters.',
+				remain: 'remain character remains',
+				url: 'field_name must be a url',
+				match: 'field_name values is not match',
+				agerange: 'You must be between minage and maxage',
+				minagerange: 'You can not be younger than minage',
+				maxagerange: 'You can not be older than maxage',
+				datecheck: 'field_name is not a valid date',
+				range: 'field_name value must be between min and max',
+				min: 'field_name value must be grater than min',
+				max: 'field_name value must be less than max',
+				pattern: 'field_name pattern is not a valid one',
+				nationalcode: 'field_name must be a valid Iranian national code',
+				capslock: 'Your CapsLock is on'
+			},
+			'fa': {
+				email: 'field_name وارد شده صحیح نمی باشد',
+				maxlength: 'field_name نباید بیشتر از length حرف باشد',
+				minlength: 'field_name نباید کمتر از length حرف باشد',
+				exactlength: 'field_name باید length حرف باشد',
+				remain: 'remain حرف باقی مانده',
+				url: 'field_name وارد شده صحیح نمی باشد',
+				match: 'مقادیر field_name یکسان نمی باشد',
+				agerange: 'سن شما باید بین minage و maxage سال باشد',
+				minagerange: 'حداقل سن قابل پذیرش minage سال می باشد',
+				maxagerange: 'سن شما باید کمتر از maxage سال باشد',
+				datecheck: 'field_name وارد شده صحیح نمی باشد',
+				range: 'field_name باید بین min و max باشد.',
+				min: 'field_name باید بزرگتر از min باشد.',
+				max: 'field_name باید کوچکتر از max باشد.',
+				pattern: 'الگوی field_name صحیح نمی باشد',
+				nationalcode: 'field_name وارد شده صحیح نمی باشد',
+				capslock: 'Caps lock شما روشن است'
+			}
 		};
 
-		return error_messages;
+		return error_messages[lang];
 	};
 
 	/**

@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Validation Power Jquery Plugin</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-rtl.min.css">
-	<link rel="stylesheet" href="css/bootstrap-flipped.min.css">
+	<!--<link rel="stylesheet" href="css/bootstrap-rtl.min.css">-->
+	<!--<link rel="stylesheet" href="css/bootstrap-flipped.min.css">-->
 	<link rel="stylesheet" href="css/persian-datepicker-0.4.5.min.css">
 	<style>
 		.red {
@@ -30,7 +30,7 @@
 	<div class="col-md-8">
 		<form class="form-horizontal">
 			<div class="form-group">
-				<label for="first_name" class="col-sm-2 control-label">نام <span class="red">*</span></label>
+				<label for="first_name" class="col-sm-2 control-label"><span class="red">*</span>Name: </label>
 
 				<div class="col-sm-10">
 					<input id="first_name" type="text" name="first_name[sadsad][0]"
@@ -38,35 +38,35 @@
 						   maxlength="12"
 						   data-vpKeyboard="keyboard"
 						   required
-						   autocomplete="off" placeholder="نام">
+						   autocomplete="off" placeholder="Name">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="last_name" class="col-sm-2 control-label">نام خانوادگی </label>
+				<label for="last_name" class="col-sm-2 control-label"><span class="red">*</span>Surname: </label>
 
 				<div class="col-sm-10">
 					<input id="last_name" type="text" name="last_name" class="form-control langFa"
-						   data-disallowed-chars="a,l,m" maxlength="20" autocomplete="off" placeholder="نام خانوادگی">
+						   data-disallowed-chars="a,l,m" maxlength="20" autocomplete="off" placeholder="Surname">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="account_num" class="col-sm-2 control-label">شماره حساب</label>
+				<label for="account_num" class="col-sm-2 control-label">Bank Account Number</label>
 
 				<div class="col-sm-10">
 					<input id="account_num" type="text" name="account_num" class="form-control langEn numberValidation"
 						   mask="___-______/___"
-						   maxlength="30" autocomplete="off" placeholder="شماره حساب"/>
+						   maxlength="30" autocomplete="off" placeholder="Bank Account Number"/>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="gender" class="col-sm-2 control-label">جنسیت <span class="red">*</span></label>
+				<label for="gender" class="col-sm-2 control-label"><span class="red">*</span>Gender</label>
 
 				<div class="col-sm-10">
 					<input id="gender" type="checkbox" name="gender" class="form-control" required />
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="birth_date" class="col-sm-2 control-label">سال تولد</label>
+				<label for="birth_date" class="col-sm-2 control-label">Birth Date</label>
 
 				<div class="col-sm-10">
 					<input id="birth_date" type="text" name="birth_date"
@@ -75,117 +75,117 @@
 						   required
 						   data-agerange='18-30'
 						   minlength='8'
-						   maxlength='30' autocomplete='off' placeholder="سال تولد"/>
+						   maxlength='30' autocomplete='off' placeholder="Birth Date"/>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="mobile" class="col-sm-2 control-label">موبایل <span class="red">*</span></label>
+				<label for="mobile" class="col-sm-2 control-label"><span class="red">*</span>Mobile: </label>
 
 				<div class="col-sm-10">
 					<input name="mobile" type="text" class="validate mobileValidation form-control"
 						   pattern="^09\d{9}$"
 						   title="Ramin sadeghi"
-						   maxlength="11" minlength="11" id="mobile" placeholder="موبایل">
+						   maxlength="11" minlength="11" id="mobile" placeholder="Mobile">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="url" class="col-sm-2 control-label"> وب سایت<span class="red">*</span></label>
+				<label for="url" class="col-sm-2 control-label"><span class="red">*</span>Website Url</label>
 
 				<div class="col-sm-10">
 					<input name="url" type="text" class="validate urlValidation form-control"
-						   id="url" placeholder="وب سایت">
+						   id="url" placeholder="Website Url">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="national_code" class="col-sm-2 control-label">کد ملی <span class="red">*</span></label>
+				<label for="national_code" class="col-sm-2 control-label"><span class="red">*</span>National Code: </label>
 
 				<div class="col-sm-10">
 					<input name="national_code" type="text" class="form-control"
 						   data-vpKeyboard="keyboard"
 						   required
-						   maxlength="10" minlength="10" id="national_code" placeholder="کد ملی">
+						   maxlength="10" minlength="10" id="national_code" placeholder="National Code">
 				</div>
 			</div>
 			<!-- To be specific password field has no validation on it, but if we want we can put some validation on it. -->
 			<div class="form-group">
-				<label for="inputPassword3" class="col-sm-2 control-label">رمز عبور <span class="red">*</span></label>
+				<label for="inputPassword3" class="col-sm-2 control-label"><span class="red">*</span>Password: </label>
 
 				<div class="col-sm-10">
-					<input type="password" class="my-passy validate form-control vp-letter-flash passwordValidation" id="inputPassword3"
+					<input type="password" class="my-passy validate form-control vp-matchP1 vp-letter-flash passwordValidation" id="inputPassword3"
 						   required
 						   name = 'password'
 						   placeholder="Password">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="inputPassword2" class="col-sm-2 control-label">تکرار رمز عبور<span class="red">*</span></label>
+				<label for="inputPassword2" class="col-sm-2 control-label"><span class="red">*</span>Confirm Password: </label>
 
 				<div class="col-sm-10">
-					<input type="password" class="my-passy validate form-control vp-letter-flash passwordValidation" id="inputPassword2"
+					<input type="password" class="my-passy validate form-control vp-matchP1 vp-letter-flash passwordValidation" id="inputPassword2"
 						   required
 						   name = 'password_confirm'
 						   placeholder="Password Confirm">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="userName" class="col-sm-2 control-label">نام کاربری <span class="red">*</span></label>
+				<label for="userName" class="col-sm-2 control-label"><span class="red">*</span>Username</label>
 
 				<div class="col-sm-10">
 					<input name="userName" maxlength="20" type="text" class="validate form-control "
 						   id="userName"
 						   required
-						   placeholder="نام کاربری">
+						   placeholder="Username">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="email" class="col-sm-2 control-label">ایمیل <span class="red">*</span></label>
+				<label for="email" class="col-sm-2 control-label"><span class="red">*</span>Email: </label>
 
 				<div class="col-sm-10">
 					<input type="email" name="email"
 						   data-vpKeyboard="keyboard"
-						   class="validate form-control vp-matchE1 emailValidation" id="email" placeholder="ایمیل"
+						   class="validate form-control vp-matchE1 emailValidation" id="email" placeholder="Email"
 						   minlength = 8
 						   required
 					>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="inputEmail1" class="col-sm-2 control-label">تکرار ایمیل<span class="red">*</span></label>
+				<label for="inputEmail1" class="col-sm-2 control-label"><span class="red">*</span>Email Confirm 1</label>
 				<div class="col-sm-10">
 					<input type="text" class="validate form-control emailValidation vp-matchE1" id="inputEmail1"
+						   required
+						   name = 'email_confirm'
+						   placeholder="Email Confirm 1">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail2" class="col-sm-2 control-label"><span class="red">*</span>Email Confirm 2: </label>
+				<div class="col-sm-10">
+					<input type="text" class="validate form-control emailValidation vp-matchE1" id="inputEmail2"
 						   required
 						   name = 'email_confirm'
 						   placeholder="Email Confirm 2">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="inputEmail2" class="col-sm-2 control-label"> 2تکرار ایمیل<span class="red">*</span></label>
-				<div class="col-sm-10">
-					<input type="text" class="validate form-control emailValidation vp-matchE1" id="inputEmail2"
-						   required
-						   name = 'email_confirm'
-						   placeholder="Email Confirm 3">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="price" class="col-sm-2 control-label">قیمت <span class="red">*</span></label>
+				<label for="price" class="col-sm-2 control-label"><span class="red">*</span>Price: </label>
 
 				<div class="col-sm-10">
 					<input name="price" type="text"
 						   class="validate costValidation form-control"  maxlength="10"
 						   data-vprange='1500-'
 						   required
-						   id="price" placeholder="قیمت"
+						   id="price" placeholder="Price"
 					>
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="about" class="col-sm-2 control-label">درباره من</label>
+				<label for="about" class="col-sm-2 control-label">About Me</label>
 
 				<div class="col-sm-10">
                     <textarea type="text" class="validate form-control remainChars addressValidation"
 							  data-allowed-chars=""
-							  data-no-lang maxlength="150" minlength="10" id="about" placeholder="درباره من"></textarea>
+							  data-no-lang maxlength="150" minlength="10" id="about" placeholder="About Me"></textarea>
 				</div>
 			</div>
 			<div class="form-group">

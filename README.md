@@ -21,7 +21,7 @@ Quick Start
 You can quickly validate a form by just attach validationPower plugin to the form, and if you have some html5 validation roles attributes on your html the plugin uses those attributes as best as possible.
 
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
     	<link rel="stylesheet" href="css/persian-datepicker-0.4.5.min.css">
     	<script src="js/jquery.min.js"></script>
@@ -48,6 +48,8 @@ You can quickly validate a form by just attach validationPower plugin to the for
 ----------
 Validation starts
 -------------------------
+> **Note:** The main html tag **lang** attribute determine that which language must be use for **Error Messages**. *In this example we use en which means error messages shown in English*.
+
 We have various number of validation out of the box, so basically we cover many users needs easilly.
 Here we have been listed all validation that we covered:
 
@@ -102,7 +104,7 @@ Here we have been listed all validation that we covered:
 > **Caution**: This validation is just for [Iranian](https://en.wikipedia.org/wiki/Iran) native national code and works with their national code compution formula.
 
 - **Comma**: This validation allow user to put comma to the input field even it has a number validation. for example if you have a price field and you want user only can enter numbers and those numbers separated by commas, then you must add commaValidation class to input.
-		1. `<input class='commaValidation'>`
+	1. `<input class='commaValidation'>`
 
 > **Note**: numbers separated by **,** on every **3 digits**.
 
