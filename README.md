@@ -1,8 +1,8 @@
-Jquery Validation Plugin
+Validation Power Plugin
 ====================
 
 
-This is a multilingual jquery validation plugin which will can easilly validate your **HTML Forms**. You can do many validations base on your needs by just adding this plugin to your forms and simply call it from script, this **plugin** can either **configure** from adding some <i>HTML Attributes</i> to form elements or <i>passing object to plugin calling</i> fuction.
+This is a multilingual jQuery plugin which will can easilly validate your **HTML Forms**. You can do many validations base on your needs by just adding this plugin to your forms and simply call it from your script, this **plugin** can either **configure** from adding some <i>HTML Attributes</i> to form elements or <i>passing object to plugin calling</i> fuction.
 
 ----------
 Dependencies
@@ -18,7 +18,7 @@ Dependencies
 Quick Start
 ----------------
 
-You can quickly validate a form by just attach validationPower plugin to the form, and if you have some html5 validation roles attributes on your html the plugin uses those attributes as best as possible.
+You can quickly validate a form by simply loading the validation-power plugin in your html page, and if you have some html5 validation roles attributes on your html the plugin uses those attributes as best as possible.
 
     <!DOCTYPE html>
     <html lang="en">
@@ -48,15 +48,16 @@ You can quickly validate a form by just attach validationPower plugin to the for
 ----------
 Validation starts
 -------------------------
-> **Note:** The main html tag **lang** attribute determine that which language must be use for **Error Messages**. *In this example we use en which means error messages shown in English*.
+> **Note:** The main html tag **lang** attribute determine that which language must be use for **Error Messages**. *In this example we use `lang="en"` which means error messages will be shown in English*.
 
-We have various number of validation out of the box, so basically we cover many users needs easilly.
-Here we have been listed all validation that we covered:
+It has various number of validation out of the box, so basically it covers many users needs with minimum or no configuration needed.
+
+## Existing validation rules:
 
  - **Requiered**: force input to has a value and disable submit button and prevent form submitting if this input has no value.
 
  - User just can enter value in a **specific language**. To do that we can add a class to the input like this:
-	 - `<input class="langFa" />` <i>//user just can enter persian</i>
+	 - `<input class="langFa" />` <i>//user only be able to enter persian characters</i>
 	 - in this example if user keyboard was setted to 'en' and user start typing each characters which user entered converted to the equivalent one on 'fa' keyboard layout.
 	 - Sometimes you want to all input be in a specific language and you want to make this work by single command, to do that you can add a property to plugin options object. <i>next line:</i>
 	 - `$('...').validationPower({ language_letters: 'langEn', language_num: 'langFa'});` <i>We separate letters and numbers language in order to you have more control on input fields.</i> **Note**: By default these two set on `LangEn`
@@ -75,17 +76,17 @@ Here we have been listed all validation that we covered:
 	 2. `<input name='email'/>`
 	 3. `<input class='emailValidation'/>`
 
-> **Caution:** this just email by email text and  do not check email validity over the internet.
-
- - **Numeric** field: You can set an input field to accept just numerical values.
+- **Numeric** field: You can set an input field to accept just numerical values.
 	1. `<input type='number'/>`
 	2. `<input name='number' />`
 	3. `<input class='numberValidation' />`
- - **Mobile/phone/tel**:  You have two different <i>(actually phone and tel are the same)</i> validation method for phone and mobile number. The difference between **mobile** and **phone/tel** is the mobile numbers must started with <i>09</i> and if user start typing anything but <i>09</i> in your input field the plugin append a <i>09</i> to the entered value But the phone/tel number has no restriction on itself.
+
+- **Mobile/phone/tel**:  You have two different <i>(actually phone and tel are the same)</i> validation method for phone and mobile number. The difference between **mobile** and **phone/tel** is the mobile numbers must started with <i>09</i> and if user start typing anything but <i>09</i> in your input field the plugin append a <i>09</i> to the entered value But the phone/tel number has no restriction on itself.
 	 1. `<input type='tel' />`
 	 2. `<input name='mobile|phone|tel'/>`
 	 3. `<input class='mobileValidation|phoneValidation|telValidation'/>`
- - **Url**: check entered value to be a valid url:
+
+- **Url**: check entered value to be a valid url:
 	 1. `<input type='url' />`
 	 2. `<input name='url' />`
 	 3. `<input class='urlValidation' />`
@@ -97,22 +98,24 @@ Here we have been listed all validation that we covered:
 > 3. www.domain.com
 > 4. domain.com
 
- - **National code**:  check to see the entered value is a valida national code.
+- **National code**:  check to see the entered value is a valida national code.
  	 1. `<input name='nationalcode|national_code' />`
  	 2. `<input class='nationalcodeValidation|national_codeValidation' />`
 
 > **Caution**: This validation is just for [Iranian](https://en.wikipedia.org/wiki/Iran) native national code and works with their national code compution formula.
 
-- **Comma**: This validation allow user to put comma to the input field even it has a number validation. for example if you have a price field and you want user only can enter numbers and those numbers separated by commas, then you must add commaValidation class to input.
+- **Comma**: This validation allow user to put comma to the input field even it has a number validation. for example if you have a price field and you want user only can enter numbers and those numbers separated by commas, then you must add `commaValidation` class to the input.
 	1. `<input class='commaValidation'>`
 
 > **Note**: numbers separated by **,** on every **3 digits**.
 
- - **Price/cost**: These validations force a field to just accepts **number** and then separate numbers on every 3 digit.
+- **Price/cost**: These validations force a field to just accepts **number** and then separate numbers on every 3 digit.
 		1. `<input name='price|cost'>`
 		2. `<input class='priceValidation|costValidation'>`
 
-> **Trick <i class='icon-magic'></i>:** You can simulate price/cost validation by using  combination of two validation which are <i>numberValidation</i> & <i>commaValidation</i>
+> **Trick <i class='icon-magic'></i>:** You can simulate price/cost validation by using a combination of two validation which are <i>numberValidation</i> & <i>commaValidation</i>
+> like this:
+> <input type="number" class="commaValidation">
 
  - **Time**: This validation adds tooltip calendar to input.
 	 1. `<input name='time' />`
