@@ -114,8 +114,7 @@ It has various number of validation out of the box, so basically it covers many 
 		2. `<input class='priceValidation|costValidation'>`
 
 > **Trick <i class='icon-magic'></i>:** You can simulate price/cost validation by using a combination of two validation which are <i>numberValidation</i> & <i>commaValidation</i>
-> like this:
-> <input type="number" class="commaValidation">
+> like this: `<input type="number" class="commaValidation">`
 
  - **Time**: This validation adds tooltip calendar to input.
 	 1. `<input name='time' />`
